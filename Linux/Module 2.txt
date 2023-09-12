@@ -1,0 +1,66 @@
+Module 2
+
+Environment Variable
+        1)  echo $PS2
+            export PS2="Nithin"
+       
+        2)  alias mv="mv -i"
+
+Basics Of System Administration in Linux
+        1)  sudo useradd user1
+            sudo usermod -m -d /home/duck user1
+        
+        2)  usermod -e 2015-07-01 user1
+
+        3)  cat /etc/passwd
+
+        4)  df - disk usage
+            du - disk space available
+
+        5)  Disk usage in current directory with .txt extension, -h human readable format
+
+        6)  sudo usermod -d /home/duck user1
+
+Simple Filters
+        1)  vi numbers.txt
+            head numbers.txt
+
+            head /etc/passwd
+            head -n 3 /etc/passwd
+
+        2)  tail numbers.txt
+
+            tail -n 3 /etc/passwd
+            tail /var/log/auth.log
+
+        3)  sort /etc/passwd
+            sort -r /etc/passwd
+            sort -t: -k3n /etc/passwd
+            sort -t: -k3n /etc/passwd
+
+        4)  vi marks.txt
+            cut -d: -f1 marks.txt
+
+            cut -d: -f1 /etc/passwd
+
+        5)  vi alphabets.txt
+            vi numbers.txt
+            paste alphabets.txt number.txt
+
+Grep
+        1)  grep -E 'apple|banana' /etc/passwd
+            grep 'foo\+'
+            grep 'colou?r'
+
+More on grep
+        1)  grep '^Y....:' /etc/passwd
+
+The Sed
+        1)  sed -n '6,12p' semdemo
+
+More on Sed
+        1)  sed 's/Ankit/Ashish/g' semdemo
+
+
+
+
