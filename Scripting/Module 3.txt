@@ -1,0 +1,122 @@
+Introduction to Bash
+    1)  echo "Welcome to Bash learning"
+        echo "***********************"
+
+Basics of Shell Scripting
+    1)  #!/bin/bash
+        pwd
+        logname
+        sh sample.sh
+    
+    2)  #!/bin/bash
+        read -t 10 -p "Enter your username: " username
+        if [ -z "$username" ]; then
+            echo "No username entered. Exiting."
+        else
+            echo "Username entered: $username"
+        fi
+
+Command Line arguments and Quoting
+    1)  #!/bin/bash
+        if [ "$#" -ne 2 ]; then
+            echo "Usage: $0 <num1> <num2>"
+            exit 1
+        fi
+        num1="$1"
+        num2="$2"
+        sum=$((num1 + num2))
+        echo "Sum: $sum"
+
+Globbing
+    1)  #!/bin/bash
+        touch file1.txt file2.txt file3.txt
+        mkdir dir1 dir2
+
+
+        echo "List of files in the current directory:"
+        for file in *
+        do
+            echo "$file"
+        done
+
+        echo "List of text files in the current directory:"
+        for txtfile in *.txt
+        do
+            echo "$txtfile"
+        done
+
+        echo "Copying all text files to 'backup' directory:"
+        mkdir backup
+        cp *.txt backup/
+
+        echo "Removing all directories:"
+        rm -r dir1 dir2
+
+        echo "Cleaning up sample files:"
+        rm *.txt
+
+Array 
+    1)  #!/bin/bash
+        names=("raju" "ramesh" "gopal" "govind" "nithin" "trilok" "thangavel")
+        total_elements=${#names[@]}
+        echo "Total number of elements in the 'names' array: $total_elements"
+        echo "All elements in the 'names' array:"
+        for name in "${names[@]}"
+        do
+            echo "$name"
+        done
+        fifth_element="${names[4]}"
+        echo "The 5th element in the 'names' array is: $fifth_element"
+
+More on arrays
+    1)  #!/bin/bash
+        names2=("raju" "ramesh" "gopal" "govind" "nithin" "trilok" "thangavel")
+        extracted_elements=("${names2[@]:2:3}")
+        echo "Extracted three elements starting from index two:"
+        for element in "${extracted_elements[@]}"
+        do
+            echo "$element"
+        done
+        names2[2]="Debian"
+        echo "Array 'names2' after replacing the third element:"
+        for element in "${names2[@]}"
+        do
+            echo "$element"
+        done
+        new_name="rajesh"
+        names2+=("$new_name")
+        echo "Array 'names2' after appending '$new_name' at the end:"
+        for element in "${names2[@]}"
+        do
+            echo "$element"
+        done
+
+Conditional Execution
+    1)  #!/bin/bash
+        system_username="$USER"
+        read -p "Enter your name: " input_name
+        if [ "$input_name" = "$system_username" ]; then
+        echo "Hello"
+        else
+        echo "Try again"
+        fi
+
+Nested and Multilevel if
+    1)  #!/bin/bash
+        read -p "Enter a number: " number
+        if [ -z "$number" ]; then
+        echo "You didn't enter a number."
+        elif [ "$number" -gt 3 ]; then
+        echo "The number is greater than 3."
+        elif [ "$number" -lt 3 ]; then
+        echo "The number is less than 3."
+        else
+        echo "The number is equal to 3."
+        fi
+
+
+
+
+
+
+
