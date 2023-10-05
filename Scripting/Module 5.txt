@@ -1,0 +1,83 @@
+Advance topics in a function
+    1)  vim functions.sh
+            #!/bin/bash
+                add() {
+                echo "$(( $1 + $2 ))"
+            }
+
+        vim add.sh
+            #!/bin/bash
+            source functions.sh
+            result=$(add 5 3)
+            echo "The sum is: $result"
+ 
+Recursive Functions
+    1)  vim recursion.sh
+            #!/bin/bash
+            calculate_sum() {
+            local n=$1
+            if [ $n -eq 1 ]; then
+                echo 1
+            else
+                local prev_sum=$(calculate_sum $((n - 1)))
+                echo $((n + prev_sum))
+            fi
+            }
+            read -p "Enter the value of n: " N
+            result=$(calculate_sum $N)
+            echo "The sum of the first $N numbers is: $result"
+
+basics of redirection
+    1)  vim addition.c
+            #include <stdio.h>
+            int main() {
+                int num1, num2;
+                printf("Enter two numbers: ");
+                scanf("%d %d", &num1, &num2);
+                int sum = num1 + num2;
+                printf("Sum: %d\n", sum);
+                return 0;
+            }
+
+        vim redirection.sh
+            #!/bin/bash
+            gcc -o addition addition.c > output.txt 2>&1
+            if [ $? -eq 0 ]; then
+                echo "Program compiled successfully."
+            else
+                echo "Compilation failed. Check output.txt for details."
+            fi
+
+    2)  vim redirect.sh
+            #!/bin/bash
+            echo "Nithin" > original.txt
+            echo "Sivakasi" >> original.txt
+            cat original.txt > new_file.txt
+            echo "Content redirected to new_file.txt"
+
+
+More on redirection
+    1)  vim redirection_more.sh
+            #!/bin/bash
+            echo "Hi" > X_file.txt
+            echo "Hello" > out_file.txt
+            cat out_file.txt X_file.txt > combined_file.txt
+            echo "Content from out_file.txt and X_file.txt combined and saved to combined_file.txt"
+
+Here document and Here string
+    1)  Here Document
+
+        #!/bin/bash
+        input_string="example string"
+        uppercase_string=$(tr 'a-z' 'A-Z' <<EOF
+        $input_string
+        EOF
+        )
+        echo "Uppercase String (Here Document): $uppercase_string"
+
+    2)  Here String
+
+        #!/bin/bash
+        input_string="example string"
+        uppercase_string=$(tr 'a-z' 'A-Z' <<< "$input_string")
+        echo "Uppercase String (Here String): $uppercase_string"
