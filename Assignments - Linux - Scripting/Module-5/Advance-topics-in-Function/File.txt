@@ -1,0 +1,13 @@
+Advance topics in a function
+    1)  vim functions.sh
+            #!/bin/bash
+                add() {
+                echo "$(( $1 + $2 ))"
+            }
+
+        vim add.sh
+            #!/bin/bash
+            source functions.sh
+            result=$(add 5 3)
+            echo "The sum is: $result"
+ 

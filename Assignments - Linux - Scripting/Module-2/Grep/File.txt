@@ -1,0 +1,6 @@
+
+Grep
+        1)  grep -E 'apple|banana' /etc/passwd
+            grep 'foo\+'
+            grep 'colou?r'
+

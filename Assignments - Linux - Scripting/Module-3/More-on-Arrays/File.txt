@@ -1,0 +1,22 @@
+More on arrays
+    1)  #!/bin/bash
+        names2=("raju" "ramesh" "gopal" "govind" "nithin" "trilok" "thangavel")
+        extracted_elements=("${names2[@]:2:3}")
+        echo "Extracted three elements starting from index two:"
+        for element in "${extracted_elements[@]}"
+        do
+            echo "$element"
+        done
+        names2[2]="Debian"
+        echo "Array 'names2' after replacing the third element:"
+        for element in "${names2[@]}"
+        do
+            echo "$element"
+        done
+        new_name="rajesh"
+        names2+=("$new_name")
+        echo "Array 'names2' after appending '$new_name' at the end:"
+        for element in "${names2[@]}"
+        do
+            echo "$element"
+        done

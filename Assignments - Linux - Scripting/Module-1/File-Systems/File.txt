@@ -1,0 +1,8 @@
+    File Systems
+        1) mkdir demodir && cd demodir
+           mkdir inside_demo && mkdir also_inside_demo
+           cd also_inside_demo 
+           mkdir abc && mkdir abc_123
+        
+        2) rm -rf also_inside_demo
+

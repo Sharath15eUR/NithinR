@@ -1,0 +1,18 @@
+
+Here document and Here string
+    1)  Here Document
+
+        #!/bin/bash
+        input_string="example string"
+        uppercase_string=$(tr 'a-z' 'A-Z' <<EOF
+        $input_string
+        EOF
+        )
+        echo "Uppercase String (Here Document): $uppercase_string"
+
+    2)  Here String
+
+        #!/bin/bash
+        input_string="example string"
+        uppercase_string=$(tr 'a-z' 'A-Z' <<< "$input_string")
+        echo "Uppercase String (Here String): $uppercase_string"

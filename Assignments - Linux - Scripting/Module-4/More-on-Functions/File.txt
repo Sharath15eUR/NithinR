@@ -1,0 +1,13 @@
+More on Functions
+    1)  #!/bin/bash
+
+        multiply() {
+            local arg1=$1
+            local arg2=$2
+            local result=$((arg1 * arg2))
+            echo "Multiplying $arg1 by $arg2 equals $result"
+        }
+
+        multiply 1 2
+        multiply 2 3
+        multiply 3 4

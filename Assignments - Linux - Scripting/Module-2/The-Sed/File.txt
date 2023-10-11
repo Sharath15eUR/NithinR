@@ -1,0 +1,4 @@
+
+The Sed
+        1)  sed -n '6,12p' semdemo
+

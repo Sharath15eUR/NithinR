@@ -1,0 +1,16 @@
+
+Basics Of System Administration in Linux
+        1)  sudo useradd user1
+            sudo usermod -m -d /home/duck user1
+        
+        2)  usermod -e 2015-07-01 user1
+
+        3)  cat /etc/passwd
+
+        4)  df - disk usage
+            du - disk space available
+
+        5)  Disk usage in current directory with .txt extension, -h human readable format
+
+        6)  sudo usermod -d /home/duck user1
+

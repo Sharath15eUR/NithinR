@@ -1,0 +1,11 @@
+Logical Operators
+    1)  #!/bin/bash
+
+        file_path=""
+
+        if [ -e "$file_path" -a -x "$file_path" ]; then
+            echo "The file exists and is executable."
+        else
+            echo "The file either does not exist or is not executable."
+        fi
+

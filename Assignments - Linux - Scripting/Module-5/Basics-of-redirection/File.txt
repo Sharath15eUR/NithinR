@@ -1,0 +1,29 @@
+basics of redirection
+    1)  vim addition.c
+            #include <stdio.h>
+            int main() {
+                int num1, num2;
+                printf("Enter two numbers: ");
+                scanf("%d %d", &num1, &num2);
+                int sum = num1 + num2;
+                printf("Sum: %d\n", sum);
+                return 0;
+            }
+
+        vim redirection.sh
+            #!/bin/bash
+            gcc -o addition addition.c > output.txt 2>&1
+            if [ $? -eq 0 ]; then
+                echo "Program compiled successfully."
+            else
+                echo "Compilation failed. Check output.txt for details."
+            fi
+
+    2)  vim redirect.sh
+            #!/bin/bash
+            echo "Nithin" > original.txt
+            echo "Sivakasi" >> original.txt
+            cat original.txt > new_file.txt
+            echo "Content redirected to new_file.txt"
+
+

@@ -1,0 +1,7 @@
+Module 1 -
+    Basic Commands
+        1)whereis man
+        
+        2)man ps
+
+    

@@ -1,0 +1,46 @@
+Case statements
+    1)  #!/bin/bash
+
+        while true; do
+            read -p "Enter value for a: " a
+            read -p "Enter value for b: " b
+
+            echo "Menu:"
+            echo "1. Addition (+)"
+            echo "2. Subtraction (-)"
+            echo "3. Multiplication (*)"
+            echo "4. Division (/)"
+            echo "5. Quit"
+
+            read -p "Select an operation (1/2/3/4/5): " choice
+
+            case $choice in
+                1)
+                    result=$((a + b))
+                    echo "Result: $a + $b = $result"
+                    ;;
+                2)
+                    result=$((a - b))
+                    echo "Result: $a - $b = $result"
+                    ;;
+                3)
+                    result=$((a * b))
+                    echo "Result: $a * $b = $result"
+                    ;;
+                4)
+                    if [ "$b" -eq 0 ]; then
+                        echo "Error: Division by zero is not allowed."
+                    else
+                        result=$(awk "BEGIN {printf \"%.2f\", $a / $b}")
+                        echo "Result: $a / $b = $result"
+                    fi
+                    ;;
+                5)
+                    echo "Exiting the program."
+                    exit 0
+                    ;;
+                *)
+                    echo "Invalid choice. Please select a valid option (1/2/3/4/5)."
+                    ;;
+            esac
+        done

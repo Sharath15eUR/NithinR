@@ -1,0 +1,21 @@
+
+
+Nested and Multilevel if
+    1)  #!/bin/bash
+        read -p "Enter a number: " number
+        if [ -z "$number" ]; then
+        echo "You didn't enter a number."
+        elif [ "$number" -gt 3 ]; then
+        echo "The number is greater than 3."
+        elif [ "$number" -lt 3 ]; then
+        echo "The number is less than 3."
+        else
+        echo "The number is equal to 3."
+        fi
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+
+More on Sed
+        1)  sed 's/Ankit/Ashish/g' semdemo
+
+
+
+

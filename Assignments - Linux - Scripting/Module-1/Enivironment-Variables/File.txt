@@ -1,0 +1,5 @@
+    Environment Variable
+        1)  echo $PS2
+            export PS2="Nithin"
+       
+        2)  alias mv="mv -i"

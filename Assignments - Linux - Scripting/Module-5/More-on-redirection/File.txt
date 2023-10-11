@@ -1,0 +1,9 @@
+More on redirection
+    1)  vim redirection_more.sh
+            #!/bin/bash
+            echo "Hi" > X_file.txt
+            echo "Hello" > out_file.txt
+            cat out_file.txt X_file.txt > combined_file.txt
+            echo "Content from out_file.txt and X_file.txt combined and saved to combined_file.txt"
+
+

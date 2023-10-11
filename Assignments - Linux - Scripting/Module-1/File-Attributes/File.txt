@@ -1,0 +1,13 @@
+    File Attributes
+        1)  touch abc.txt
+            sudo useradd demo
+            sudo groupadd family
+            sudo chown demo abc.txt
+            sudo chown :family abc.txt
+        
+        2)  touch exercise.txt
+            sudo chmod +764 exercise.txt
+
+        3)  touch test.txt
+            ls -li
+            ln -s /home/user/Desktop/test.txt /home

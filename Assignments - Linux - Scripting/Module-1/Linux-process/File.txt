@@ -1,0 +1,8 @@
+    Linux process
+        1)  /bin/bash -i
+            /bin/bash -i
+            /bin/bash -i
+            ps all
+
+        2)  ps -e >> process_info
+            more process_info

@@ -1,0 +1,29 @@
+Globbing
+    1)  #!/bin/bash
+        touch file1.txt file2.txt file3.txt
+        mkdir dir1 dir2
+
+
+        echo "List of files in the current directory:"
+        for file in *
+        do
+            echo "$file"
+        done
+
+        echo "List of text files in the current directory:"
+        for txtfile in *.txt
+        do
+            echo "$txtfile"
+        done
+
+        echo "Copying all text files to 'backup' directory:"
+        mkdir backup
+        cp *.txt backup/
+
+        echo "Removing all directories:"
+        rm -r dir1 dir2
+
+        echo "Cleaning up sample files:"
+        rm *.txt
+
+

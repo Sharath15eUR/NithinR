@@ -1,0 +1,27 @@
+
+Simple Filters
+        1)  vi numbers.txt
+            head numbers.txt
+
+            head /etc/passwd
+            head -n 3 /etc/passwd
+
+        2)  tail numbers.txt
+
+            tail -n 3 /etc/passwd
+            tail /var/log/auth.log
+
+        3)  sort /etc/passwd
+            sort -r /etc/passwd
+            sort -t: -k3n /etc/passwd
+            sort -t: -k3n /etc/passwd
+
+        4)  vi marks.txt
+            cut -d: -f1 marks.txt
+
+            cut -d: -f1 /etc/passwd
+
+        5)  vi alphabets.txt
+            vi numbers.txt
+            paste alphabets.txt number.txt
+

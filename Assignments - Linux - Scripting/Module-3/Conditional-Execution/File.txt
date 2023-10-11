@@ -1,0 +1,11 @@
+Conditional Execution
+    1)  #!/bin/bash
+        system_username="$USER"
+        read -p "Enter your name: " input_name
+        if [ "$input_name" = "$system_username" ]; then
+        echo "Hello"
+        else
+        echo "Try again"
+        fi
+
+

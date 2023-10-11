@@ -1,0 +1,20 @@
+Array on Functions
+    1)  #!/bin/bash
+
+        sumArrayElements() {
+            local sum=0
+            for element in "${@}"; do
+                sum=$((sum + element))
+            done
+            echo "Sum of elements: $sum"
+        }
+
+        array1=(1 2 3)
+        array2=(4 5 6)
+
+        echo "Calling with array1: ${array1[@]}"
+        sumArrayElements "${array1[@]}"
+
+        echo "Calling with array2: ${array2[@]}"
+        sumArrayElements "${array2[@]}"
+

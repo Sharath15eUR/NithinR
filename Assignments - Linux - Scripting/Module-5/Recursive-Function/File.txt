@@ -1,0 +1,17 @@
+
+Recursive Functions
+    1)  vim recursion.sh
+            #!/bin/bash
+            calculate_sum() {
+            local n=$1
+            if [ $n -eq 1 ]; then
+                echo 1
+            else
+                local prev_sum=$(calculate_sum $((n - 1)))
+                echo $((n + prev_sum))
+            fi
+            }
+            read -p "Enter the value of n: " N
+            result=$(calculate_sum $N)
+            echo "The sum of the first $N numbers is: $result"
+

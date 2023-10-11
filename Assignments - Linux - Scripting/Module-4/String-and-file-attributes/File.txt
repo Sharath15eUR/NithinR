@@ -1,0 +1,31 @@
+String and File attributes
+    1)  #!/bin/bash
+
+        file="example.txt"
+
+        if [ -r "$file" ]; then
+            echo "The file $file is readable."
+        else
+            echo "The file $file is not readable."
+        fi
+
+    2)  #!/bin/bash
+
+        script="myscript.sh"
+
+        if [ -x "$script" ]; then
+            echo "The script $script is executable."
+        else
+            echo "The script $script is not executable."
+        fi
+
+    3)  #!/bin/bash
+
+        file="mydata.txt"
+
+        if [ -o "$file" ]; then
+            echo "You are the owner of the file $file."
+        else
+            echo "You are not the owner of the file $file."
+        fi
+

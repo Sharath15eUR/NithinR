@@ -1,0 +1,19 @@
+Using File Descriptors
+    1)  #!/bin/bash
+
+        exec 3>>"test.txt"
+
+        echo "This is line 1" >&3
+        echo "This is line 2" >&3
+        echo "This is line 3" >&3
+
+        exec 3>&-
+
+        echo "Lines appended to test.txt."
+
+    2)  #!/bin/bash
+
+        exec 3<"test.txt"
+        cat <&3
+        exec 3<&-
+

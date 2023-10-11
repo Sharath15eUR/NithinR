@@ -1,0 +1,14 @@
+Basics of Shell Scripting
+    1)  #!/bin/bash
+        pwd
+        logname
+        sh sample.sh
+    
+    2)  #!/bin/bash
+        read -t 10 -p "Enter your username: " username
+        if [ -z "$username" ]; then
+            echo "No username entered. Exiting."
+        else
+            echo "Username entered: $username"
+        fi
+
